@@ -93,6 +93,24 @@ exports.updateProduct2 = async (req, res) => {
     }
 }
 
+/**+
+ * Funcion actualizar Jose Julian
+ */
+
+exports.updateProduct3 = async (req, res) => {
+    try {
+        const updateProduct = await Producto.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if(!updateProduct){
+            res.status(404).send('No existe un cliente con ese ID')
+        }
+        res.json(updateProduct);
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).send(`Èl producto con el id ${req.params.id} no se pudo ser actualizado`)
+    }
+}
+
 
 
 /**
@@ -115,6 +133,8 @@ exports.deleteProduct = async (req, res) => {
         res.status(500).send('Error al eliminar un  cliente por ID')
     }
 }
+
+
 
 
 

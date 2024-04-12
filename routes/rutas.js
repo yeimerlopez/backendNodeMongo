@@ -15,12 +15,7 @@ router.put('/clientes/:id', clienteController.actualizarCliente);
 router.post ('/productos/createProducto', productoController.createProduct);
 router.get ('/productos/getAllProducts', productoController.getAllProducts);
 router.get ('/productos/:id', productoController.getProductById);
-router.put ('/productos/:id', productoController.updateProduct);
+router.put ('/productos/:id', productoController.updateProduct3);
 router.delete ('/productos/:id', productoController.deleteProduct);
-
-
-
-
-
 
 module.exports = router;
