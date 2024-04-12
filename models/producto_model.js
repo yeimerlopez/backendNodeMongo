@@ -1,34 +1,31 @@
 const mongoose = require  ('mongoose');
 
-// el momdelo que se creeaca debe ser igual al de la base de datos
-
-
-const clienteSchema =  mongoose.Schema({
-    nombres:{
+const productoSchema =  mongoose.Schema({
+    nombre:{
         type: String,
         required: true
     },
-    apellidos:{
+    codigo:{
         type: String,
         required: true  
     },
-    documento:{
+    precioVenta:{
         type: Number,
         required: true
     },
-    correo:{
-        type: String,
+    cantidad:{
+        type: Number,
         required: true  
     },
-    telefono:{
-        type: String,
+    precioCompra:{
+        type: Number,
         required: true
     },
-    direccion:{
+    foto:{
         type: String,
         required: true  
     },
 
 }, { versionkey: false});
 
-module.exports = mongoose.model('Cliente', clienteSchema)
+module.exports = mongoose.model('Producto', productoSchema)
